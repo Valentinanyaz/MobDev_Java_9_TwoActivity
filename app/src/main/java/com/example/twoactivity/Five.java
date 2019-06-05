@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class ActivityTwo extends AppCompatActivity {
+public class Five extends AppCompatActivity {
 
     final String TAG = "States";
 
@@ -45,15 +45,23 @@ public class ActivityTwo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_five);
 
-        Log.d(TAG, "ActivityTwo: onCreate()");
+        Log.d(TAG, "ActivityFive: onCreate()");
     }
 
     void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnActMain:
                 Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+        switch (v.getId()) {
+            case R.id.btnActTwo:
+                Intent intent = new Intent(this, ActivityTwo.class);
                 startActivity(intent);
                 break;
             default:
@@ -75,14 +83,6 @@ public class ActivityTwo extends AppCompatActivity {
             default:
                 break;
         }
-        switch (v.getId()) {
-            case R.id.btnActFive:
-                Intent intent = new Intent(this, Five.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
-        }
 
 
     }
@@ -90,36 +90,36 @@ public class ActivityTwo extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "ActivityTwo: onRestart()");
+        Log.d(TAG, "ActivityFive: onRestart()");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "ActivityTwo: onStart()");
+        Log.d(TAG, "ActivityFive: onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "ActivityTwo: onResume()");
+        Log.d(TAG, "ActivityFive: onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "ActivityTwo: onPause()");
+        Log.d(TAG, "ActivityFive: onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "ActivityTwo: onStop()");
+        Log.d(TAG, "ActivityFive: onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "ActivityTwo: onDestroy()");
+        Log.d(TAG, "ActivityFive: onDestroy()");
     }
 }
